@@ -6,10 +6,10 @@ Also, it models the Bindings and Scopes.
 """
 import os.path
 try:
-    import builtins
+    builtins = __import__('builtins')
     PY2 = False
 except ImportError:
-    import __builtin__ as builtins
+    builtins = __import__('__builtin__')
     PY2 = True
 
 try:
